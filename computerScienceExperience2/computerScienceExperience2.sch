@@ -1,0 +1,447 @@
+EESchema Schematic File Version 4
+LIBS:computerScienceExperience2-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	7200 3600 7300 3600
+Wire Wire Line
+	6500 4000 6600 4000
+Wire Wire Line
+	7200 4100 7300 4100
+Wire Wire Line
+	7300 4000 6500 3800
+Wire Wire Line
+	7300 3700 6500 3900
+Wire Wire Line
+	6500 3900 6500 4000
+Wire Wire Line
+	7300 3600 7300 3700
+Wire Wire Line
+	7300 4100 7300 4000
+Wire Wire Line
+	6500 3700 6500 3800
+Wire Wire Line
+	6500 3700 6600 3700
+Wire Wire Line
+	6600 4200 6150 4200
+Wire Wire Line
+	6600 3500 5950 3500
+$Comp
+L Switch:SW_Push_SPDT SW1
+U 1 1 5DC7392C
+P 6050 4550
+F 0 "SW1" V 6096 4362 50  0000 R CNN
+F 1 "SW_Push_SPDT" V 6005 4362 50  0000 R CNN
+F 2 "myFootprints:TL2285" H 6050 4550 50  0001 C CNN
+F 3 "~" H 6050 4550 50  0001 C CNN
+	1    6050 4550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6150 4200 6150 4350
+Wire Wire Line
+	5950 3500 5950 4350
+Wire Wire Line
+	6050 4750 6050 4900
+Text Notes 5900 4350 0    50   ~ 0
+~S
+Text Notes 6150 4350 0    50   ~ 0
+~R
+Wire Wire Line
+	5950 3500 5950 3350
+Connection ~ 5950 3500
+Wire Wire Line
+	6150 4200 6150 3350
+Connection ~ 6150 4200
+$Comp
+L Device:R R1
+U 1 1 5DCC03F1
+P 5950 3200
+F 0 "R1" H 5800 3250 50  0000 L CNN
+F 1 "470" H 5750 3150 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5880 3200 50  0001 C CNN
+F 3 "~" H 5950 3200 50  0001 C CNN
+	1    5950 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5DCC07DB
+P 6150 3200
+F 0 "R2" H 6220 3246 50  0000 L CNN
+F 1 "470" H 6220 3155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6080 3200 50  0001 C CNN
+F 3 "~" H 6150 3200 50  0001 C CNN
+	1    6150 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 3050 5950 2850
+Wire Bus Line
+	5600 2700 5600 5000
+Wire Bus Line
+	5600 5000 7900 5000
+Wire Bus Line
+	7900 5000 7900 2700
+Wire Bus Line
+	7900 2700 5600 2700
+Text Notes 6400 5150 0    50   ~ 0
+Pulse Generater
+Text Label 9200 3550 0    50   ~ 0
+OUTPUT_Q
+Text Label 8600 3750 2    50   ~ 0
+INPUT_K
+Text Label 8600 3650 2    50   ~ 0
+CLK
+Text Label 8600 3550 2    50   ~ 0
+INPUT_J
+NoConn ~ 9200 3750
+Wire Bus Line
+	8250 3400 8250 4550
+Wire Bus Line
+	8250 4550 9600 4550
+Wire Bus Line
+	9600 4550 9600 3400
+Wire Bus Line
+	9600 3400 8250 3400
+Text Notes 8700 4650 0    50   ~ 0
+JK FlipFlop
+$Comp
+L Device:R R4
+U 1 1 5DD9098C
+P 4600 3050
+F 0 "R4" H 4670 3096 50  0000 L CNN
+F 1 "470" H 4670 3005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4530 3050 50  0001 C CNN
+F 3 "~" H 4600 3050 50  0001 C CNN
+	1    4600 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5DD90993
+P 4600 3500
+F 0 "D2" V 4639 3383 50  0000 R CNN
+F 1 "LED" V 4548 3383 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4600 3500 50  0001 C CNN
+F 3 "~" H 4600 3500 50  0001 C CNN
+	1    4600 3500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4600 3200 4600 3350
+Wire Wire Line
+	4600 3650 4600 3900
+Wire Wire Line
+	4600 3900 4950 3900
+Text Label 4950 3900 2    50   ~ 0
+INPUT_K
+Wire Bus Line
+	3900 2450 5250 2450
+Wire Bus Line
+	5250 2450 5250 5150
+Wire Bus Line
+	5250 5150 3900 5150
+Wire Bus Line
+	3900 5150 3900 2450
+Text Notes 4500 5250 0    50   ~ 0
+INPUT
+$Comp
+L Device:R R5
+U 1 1 5DDBEB05
+P 3200 4600
+F 0 "R5" H 3270 4646 50  0000 L CNN
+F 1 "470" H 3270 4555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3130 4600 50  0001 C CNN
+F 3 "~" H 3200 4600 50  0001 C CNN
+	1    3200 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 4900 3200 4750
+Wire Wire Line
+	3200 4450 3200 4300
+$Comp
+L Device:LED D3
+U 1 1 5DDC1A4C
+P 3200 4150
+F 0 "D3" V 3239 4033 50  0000 R CNN
+F 1 "LED" V 3148 4033 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3200 4150 50  0001 C CNN
+F 3 "~" H 3200 4150 50  0001 C CNN
+	1    3200 4150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3200 4000 3200 3850
+Wire Bus Line
+	1750 3700 1750 5150
+Wire Bus Line
+	1750 5150 3500 5150
+Wire Bus Line
+	3500 5150 3500 3700
+Wire Bus Line
+	3500 3700 1750 3700
+Text Notes 2600 5250 0    50   ~ 0
+OUTPUT
+Text Label 7800 4100 2    50   ~ 0
+CLK
+Connection ~ 7300 4100
+Wire Bus Line
+	7550 3950 7600 3950
+Wire Bus Line
+	7550 4050 7550 3950
+Wire Bus Line
+	7500 4050 7550 4050
+Wire Bus Line
+	7500 3950 7500 4050
+Wire Bus Line
+	7450 3950 7500 3950
+Wire Bus Line
+	7450 4050 7450 3950
+Wire Bus Line
+	7400 4050 7450 4050
+Wire Wire Line
+	7300 4100 7800 4100
+$Comp
+L 74xx:74HC00 U3
+U 1 1 5DEAE563
+P 6900 3600
+F 0 "U3" H 6900 3925 50  0000 C CNN
+F 1 "74HC00" H 6900 3834 50  0000 C CNN
+F 2 "myFootprints:74HC00D_14-SOIC" H 6900 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 6900 3600 50  0001 C CNN
+	1    6900 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U3
+U 2 1 5DEB0CF4
+P 6900 4100
+F 0 "U3" H 6900 3900 50  0000 C CNN
+F 1 "74HC00" H 6900 3800 50  0000 C CNN
+F 2 "myFootprints:74HC00D_14-SOIC" H 6900 4100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 6900 4100 50  0001 C CNN
+	2    6900 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC04 U2
+U 1 1 5DEBB31E
+P 2750 4900
+F 0 "U2" H 2750 5217 50  0000 C CNN
+F 1 "74HC04" H 2750 5126 50  0000 C CNN
+F 2 "myFootprints:74HC04D_14-SOIC" H 2750 4900 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 2750 4900 50  0001 C CNN
+	1    2750 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 4900 3200 4900
+$Comp
+L Switch:SW_DIP_x02 SW2
+U 1 1 5DF0CF28
+P 4500 4400
+F 0 "SW2" V 4454 4630 50  0000 L CNN
+F 1 "SW_DIP_x02" V 4545 4630 50  0000 L CNN
+F 2 "Package_DIP:DIP-4_W7.62mm_SMDSocket_SmallPads" H 4500 4400 50  0001 C CNN
+F 3 "~" H 4500 4400 50  0001 C CNN
+	1    4500 4400
+	0    1    1    0   
+$EndComp
+Text Label 4150 3900 0    50   ~ 0
+INPUT_J
+Wire Wire Line
+	4500 3650 4500 3900
+Wire Wire Line
+	4500 3200 4500 3350
+$Comp
+L Device:LED D1
+U 1 1 5DD78602
+P 4500 3500
+F 0 "D1" V 4550 3700 50  0000 R CNN
+F 1 "LED" V 4450 3700 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4500 3500 50  0001 C CNN
+F 3 "~" H 4500 3500 50  0001 C CNN
+	1    4500 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5DD768E3
+P 4500 3050
+F 0 "R3" H 4300 3100 50  0000 L CNN
+F 1 "470" H 4300 3000 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4430 3050 50  0001 C CNN
+F 3 "~" H 4500 3050 50  0001 C CNN
+	1    4500 3050
+	1    0    0    -1  
+$EndComp
+Connection ~ 4600 3900
+Connection ~ 4500 3900
+Wire Wire Line
+	4500 3900 4150 3900
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5DFCA689
+P 2800 2750
+F 0 "#FLG0101" H 2800 2825 50  0001 C CNN
+F 1 "PWR_FLAG" H 2800 2923 50  0000 C CNN
+F 2 "" H 2800 2750 50  0001 C CNN
+F 3 "~" H 2800 2750 50  0001 C CNN
+	1    2800 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2850 6150 3050
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5E022888
+P 2350 2950
+F 0 "J1" H 2268 2625 50  0000 C CNN
+F 1 "Conn_01x02" H 2268 2716 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2350 2950 50  0001 C CNN
+F 3 "~" H 2350 2950 50  0001 C CNN
+	1    2350 2950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2550 2850 2800 2850
+Wire Wire Line
+	2550 2950 2800 2950
+Text Label 3100 2850 2    50   ~ 0
+Vcc
+Text Label 3100 2950 2    50   ~ 0
+GND
+Wire Wire Line
+	4600 2650 4600 2900
+Text Label 4500 2650 2    50   ~ 0
+Vcc
+Text Label 4600 2650 0    50   ~ 0
+Vcc
+Wire Wire Line
+	4500 2650 4500 2900
+Wire Wire Line
+	2800 2750 2800 2850
+Connection ~ 2800 2850
+Wire Wire Line
+	2800 2850 3100 2850
+Text Label 3200 3850 0    50   ~ 0
+Vcc
+Text Label 5950 2850 0    50   ~ 0
+Vcc
+Text Label 6150 2850 0    50   ~ 0
+Vcc
+Text Label 4500 5000 2    50   ~ 0
+GND
+Text Label 4600 5000 0    50   ~ 0
+GND
+Wire Wire Line
+	4500 4700 4500 5000
+Wire Wire Line
+	4600 4700 4600 5000
+Wire Wire Line
+	4600 3900 4600 4100
+Wire Wire Line
+	4500 3900 4500 4100
+Text Label 6050 4900 0    50   ~ 0
+GND
+Text Label 8900 3950 0    50   ~ 0
+Vcc
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E092566
+P 2800 3050
+F 0 "#FLG0102" H 2800 3125 50  0001 C CNN
+F 1 "PWR_FLAG" H 2800 3223 50  0000 C CNN
+F 2 "" H 2800 3050 50  0001 C CNN
+F 3 "~" H 2800 3050 50  0001 C CNN
+	1    2800 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2800 3050 2800 2950
+Connection ~ 2800 2950
+Wire Wire Line
+	2800 2950 3100 2950
+Wire Bus Line
+	2150 2450 3200 2450
+Wire Bus Line
+	3200 2450 3200 3300
+Wire Bus Line
+	3200 3300 2150 3300
+Wire Bus Line
+	2150 3300 2150 2450
+Text Notes 2550 3400 0    50   ~ 0
+Power
+$Comp
+L myComponents:74HC73 U1
+U 3 1 5E0F5F4C
+P 8850 4350
+F 0 "U1" V 9167 4300 50  0000 C CNN
+F 1 "74HC73" V 9076 4300 50  0000 C CNN
+F 2 "myFootprints:74HC73D_14-SOIC" H 8500 4700 50  0001 C CNN
+F 3 "" H 8500 4700 50  0001 C CNN
+	3    8850 4350
+	0    -1   -1   0   
+$EndComp
+Text Label 9200 4350 0    50   ~ 0
+GND
+Text Label 8600 4350 2    50   ~ 0
+Vcc
+$Comp
+L 74xx:74HC00 U3
+U 5 1 5E1277B6
+P 7200 4750
+F 0 "U3" V 7567 4750 50  0000 C CNN
+F 1 "74HC00" V 7476 4750 50  0000 C CNN
+F 2 "myFootprints:74HC00D_14-SOIC" H 7200 4750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 7200 4750 50  0001 C CNN
+	5    7200 4750
+	0    -1   -1   0   
+$EndComp
+Text Label 2450 4900 2    50   ~ 0
+OUTPUT_Q
+Text Label 6700 4750 2    50   ~ 0
+Vcc
+Text Label 7700 4750 0    50   ~ 0
+GND
+$Comp
+L myComponents:74HC73 U1
+U 2 1 5E19F83D
+P 8900 3650
+F 0 "U1" H 9129 10715 50  0000 C CNN
+F 1 "74HC73" H 9129 10624 50  0000 C CNN
+F 2 "myFootprints:74HC73D_14-SOIC" H 8550 4000 50  0001 C CNN
+F 3 "" H 8550 4000 50  0001 C CNN
+	2    8900 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC04 U2
+U 7 1 5E1AC9C9
+P 2450 4250
+F 0 "U2" V 2817 4250 50  0000 C CNN
+F 1 "74HC04" V 2726 4250 50  0000 C CNN
+F 2 "myFootprints:74HC04D_14-SOIC" H 2450 4250 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 2450 4250 50  0001 C CNN
+	7    2450 4250
+	0    -1   -1   0   
+$EndComp
+Text Label 1950 4250 2    50   ~ 0
+Vcc
+Text Label 2950 4250 0    50   ~ 0
+GND
+$EndSCHEMATC
