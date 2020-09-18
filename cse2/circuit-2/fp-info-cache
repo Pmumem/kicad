@@ -1,4 +1,4 @@
-18636859029269136
+18638459427759136
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -82055,6 +82055,13 @@ myFootprint
 14
 myFootprint
 74HC73D_14-SOIC
+
+
+0
+14
+14
+myFootprint
+DIP-14-SMD
 
 
 0
